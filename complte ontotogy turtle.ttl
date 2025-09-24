@@ -1,0 +1,239 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/football#hasAnnualSalary
+<http://example.org/football#hasAnnualSalary> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://example.org/football#Salary> ;
+                                              rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasAssists
+<http://example.org/football#hasAssists> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://example.org/football#Stat> ;
+                                         rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasAttendance
+<http://example.org/football#hasAttendance> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://example.org/football#Match> ;
+                                            rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasAwayScore
+<http://example.org/football#hasAwayScore> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://example.org/football#Match> ;
+                                           rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasAwayTeam
+<http://example.org/football#hasAwayTeam> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://example.org/football#Match> ;
+                                          rdfs:range <http://example.org/football#Team> .
+
+
+###  http://example.org/football#hasDate
+<http://example.org/football#hasDate> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://example.org/football#Match> ;
+                                      rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#date> .
+
+
+###  http://example.org/football#hasExpectedGoals
+<http://example.org/football#hasExpectedGoals> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://example.org/football#Stat> ;
+                                               rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#float> .
+
+
+###  http://example.org/football#hasGoals
+<http://example.org/football#hasGoals> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://example.org/football#Stat> ;
+                                       rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasHomeScore
+<http://example.org/football#hasHomeScore> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://example.org/football#Match> ;
+                                           rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasHomeTeam
+<http://example.org/football#hasHomeTeam> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://example.org/football#Match> ;
+                                          rdfs:range <http://example.org/football#Team> .
+
+
+###  http://example.org/football#hasPlayer
+<http://example.org/football#hasPlayer> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://example.org/football#Team> ;
+                                        rdfs:range <http://example.org/football#Player> .
+
+
+###  http://example.org/football#hasPlayersCount
+<http://example.org/football#hasPlayersCount> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://example.org/football#TeamSalary> ;
+                                              rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasPoints
+<http://example.org/football#hasPoints> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://example.org/football#Standing> ;
+                                        rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasPossession
+<http://example.org/football#hasPossession> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://example.org/football#TeamStats> ;
+                                            rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#float> .
+
+
+###  http://example.org/football#hasProgressivePasses
+<http://example.org/football#hasProgressivePasses> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://example.org/football#Stat> ;
+                                                   rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasRank
+<http://example.org/football#hasRank> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://example.org/football#Standing> ;
+                                      rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasRedCards
+<http://example.org/football#hasRedCards> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://example.org/football#TeamStats> ;
+                                          rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasReferee
+<http://example.org/football#hasReferee> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://example.org/football#Match> ;
+                                         rdfs:range <http://example.org/football#Referee> .
+
+
+###  http://example.org/football#hasStanding
+<http://example.org/football#hasStanding> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://example.org/football#Team> ;
+                                          rdfs:range <http://example.org/football#Standing> .
+
+
+###  http://example.org/football#hasStat
+<http://example.org/football#hasStat> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://example.org/football#Player> ;
+                                      rdfs:range <http://example.org/football#Stat> .
+
+
+###  http://example.org/football#hasTeamSalary
+<http://example.org/football#hasTeamSalary> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://example.org/football#Team> ;
+                                            rdfs:range <http://example.org/football#TeamSalary> .
+
+
+###  http://example.org/football#hasTeamStats
+<http://example.org/football#hasTeamStats> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://example.org/football#Team> ;
+                                           rdfs:range <http://example.org/football#TeamStats> .
+
+
+###  http://example.org/football#hasTime
+<http://example.org/football#hasTime> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://example.org/football#Match> ;
+                                      rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#time> .
+
+
+###  http://example.org/football#hasVenue
+<http://example.org/football#hasVenue> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://example.org/football#Match> ;
+                                       rdfs:range <http://example.org/football#Venue> .
+
+
+###  http://example.org/football#hasWeeklySalary
+<http://example.org/football#hasWeeklySalary> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://example.org/football#Salary> ;
+                                              rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+###  http://example.org/football#hasYellowCards
+<http://example.org/football#hasYellowCards> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://example.org/football#TeamStats> ;
+                                             rdfs:range <http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/football#Match
+<http://example.org/football#Match> rdf:type owl:Class .
+
+
+###  http://example.org/football#Player
+<http://example.org/football#Player> rdf:type owl:Class .
+
+
+###  http://example.org/football#Referee
+<http://example.org/football#Referee> rdf:type owl:Class .
+
+
+###  http://example.org/football#Salary
+<http://example.org/football#Salary> rdf:type owl:Class .
+
+
+###  http://example.org/football#Standing
+<http://example.org/football#Standing> rdf:type owl:Class .
+
+
+###  http://example.org/football#Stat
+<http://example.org/football#Stat> rdf:type owl:Class .
+
+
+###  http://example.org/football#Team
+<http://example.org/football#Team> rdf:type owl:Class .
+
+
+###  http://example.org/football#TeamSalary
+<http://example.org/football#TeamSalary> rdf:type owl:Class .
+
+
+###  http://example.org/football#TeamStats
+<http://example.org/football#TeamStats> rdf:type owl:Class .
+
+
+###  http://example.org/football#Venue
+<http://example.org/football#Venue> rdf:type owl:Class .
+
+
+###  http://example.org/football#http://www.w3.org/2001/XMLSchema#date
+<http://example.org/football#http://www.w3.org/2001/XMLSchema#date> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#value> .
+
+
+###  http://example.org/football#http://www.w3.org/2001/XMLSchema#float
+<http://example.org/football#http://www.w3.org/2001/XMLSchema#float> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#value> .
+
+
+###  http://example.org/football#http://www.w3.org/2001/XMLSchema#integer
+<http://example.org/football#http://www.w3.org/2001/XMLSchema#integer> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#value> .
+
+
+###  http://example.org/football#http://www.w3.org/2001/XMLSchema#time
+<http://example.org/football#http://www.w3.org/2001/XMLSchema#time> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#value> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#value
+<http://www.co-ode.org/ontologies/ont.owl#value> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
